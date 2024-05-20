@@ -1,5 +1,5 @@
-# Use an official OpenJDK runtime as a parent image
-FROM openjdk:11-jre-slim
+# Use an official OpenJDK runtime as a parent image with JDK included
+FROM openjdk:11-jdk-slim
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -12,4 +12,3 @@ RUN javac HelloWorld.java
 
 # Run the Java program
 CMD ["java", "HelloWorld"]
-
